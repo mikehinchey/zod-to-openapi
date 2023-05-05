@@ -37,5 +37,5 @@ export function isZodType<TypeName extends keyof ZodTypes>(
 }
 
 export function isAnyZodType(schema: object): schema is z.ZodType {
-  return '_def' in schema;
+  return schema && '_def' in schema;
 }
